@@ -57,6 +57,8 @@ node default {
   include git
   include hub
   include nginx
+  include brewcask
+  include homebrew
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -75,12 +77,17 @@ node default {
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
+  homebrew::tap { 'caskroom/versions': }
+
   # common, useful packages
   package {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'zsh',
+      'htop',
+      'tmux',
     ]:
   }
 
@@ -88,4 +95,16 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  # Some Required Apps
+  package { 'google-chrome'             : provider => 'brewcask' }
+  package { 'firefox'                   : provider => 'brewcask' }
+  package { 'intellij-idea-bundled-jdk' : provider => 'brewcask' }
+  package { 'phpstorm'                  : provider => 'brewcask' }
+  package { 'atom'                      : provider => 'brewcask' }
+  package { 'iterm2'                    : provider => 'brewcask' }
+  package { 'hipchat'                   : provider => 'brewcask' }
+  package { 'gas-mask'                  : provider => 'brewcask' }
+  package { 'lastpass'                  : provider => 'brewcask' }
+  package { 'microsoft-office-preview'  : provider => 'brewcask' }
 }

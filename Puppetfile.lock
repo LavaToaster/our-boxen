@@ -89,6 +89,11 @@ GITHUBTARBALL
     xquartz (1.2.1)
 
 GITHUBTARBALL
+  remote: fernandes/puppet-ohmyzsh
+  specs:
+    ohmyzsh (1.0.0)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.1.1)
@@ -106,6 +111,7 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 3.10.4)
   brewcask (= 0.0.6)
+  brewcask (= 0.0.6)
   dnsmasq (= 2.0.1)
   foreman (= 1.2.0)
   gcc (= 2.2.1)
@@ -117,6 +123,7 @@ DEPENDENCIES
   module_data (= 0.0.3)
   nginx (= 1.4.5)
   nodejs (= 4.0.1)
+  ohmyzsh (= 1.0.0)
   openssl (= 1.0.0)
   phantomjs (= 2.4.0)
   pkgconfig (= 1.0.0)
