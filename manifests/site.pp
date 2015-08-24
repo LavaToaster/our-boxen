@@ -15,7 +15,8 @@ Exec {
     '/usr/bin',
     '/bin',
     '/usr/sbin',
-    '/sbin'
+    '/sbin',
+    "/Users/${::boxen_user}/.composer/vendor/bin"
   ],
 
   environment => [
@@ -56,7 +57,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
   include brewcask
   include homebrew
 
@@ -78,6 +78,8 @@ node default {
   ruby::version { '2.1.2': }
 
   homebrew::tap { 'caskroom/versions': }
+  homebrew::tap { 'homebrew/dupes': }
+  homebrew::tap { 'homebrew/php': }
 
   # common, useful packages
   package {
@@ -88,6 +90,10 @@ node default {
       'zsh',
       'htop',
       'tmux',
+      'php56',
+      'php56-mcrypt',
+      'php56-mysqlnd_ms',
+      'composer'
     ]:
   }
 
@@ -107,4 +113,9 @@ node default {
   package { 'gas-mask'                  : provider => 'brewcask' }
   package { 'lastpass'                  : provider => 'brewcask' }
   package { 'microsoft-office-preview'  : provider => 'brewcask' }
+  package { 'virtualbox'                : provider => 'brewcask' }
+  package { 'vagrant'                   : provider => 'brewcask' }
+  package { 'teamviewer'                : provider => 'brewcask' }
+  package { 'sequel-pro-nightly'        : provider => 'brewcask' } 
+  package { 'gpgtools'                  : provider => 'brewcask' }
 }
