@@ -87,6 +87,7 @@ node default {
       'zsh',
       'htop',
       'tmux',
+      'nodejs',
       'php56',
       'php56-mcrypt',
       'php56-mysqlnd_ms',
