@@ -106,13 +106,13 @@ node default {
   package { 'google-chrome'             : provider => 'brewcask' }
   package { 'firefox'                   : provider => 'brewcask' }
   package { 'intellij-idea-bundled-jdk' : provider => 'brewcask' }
-  package { 'phpstorm'                  : provider => 'brewcask' }
+  package { 'phpstorm-bundled-jdk'      : provider => 'brewcask' }
   package { 'atom'                      : provider => 'brewcask' }
   package { 'iterm2'                    : provider => 'brewcask' }
   package { 'hipchat'                   : provider => 'brewcask' }
   package { 'gas-mask'                  : provider => 'brewcask' }
   package { 'lastpass'                  : provider => 'brewcask' }
-  package { 'microsoft-office-preview'  : provider => 'brewcask' }
+  package { 'microsoft-office365'       : provider => 'brewcask' }
   package { 'virtualbox'                : provider => 'brewcask' }
   package { 'vagrant'                   : provider => 'brewcask' }
   package { 'teamviewer'                : provider => 'brewcask' }
