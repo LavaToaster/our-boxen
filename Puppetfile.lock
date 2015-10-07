@@ -111,6 +111,7 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 3.11.0)
   brewcask (= 0.0.6)
+  brewcask (= 0.0.6)
   dnsmasq (= 2.0.1)
   foreman (= 1.2.0)
   gcc (= 3.0.2)
